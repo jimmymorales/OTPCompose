@@ -3,7 +3,9 @@ package dev.jimmymorales.otp
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -29,7 +31,10 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun OtpItem(value: Int) {
-    Surface(elevation = 4.dp) {
+    Surface(
+        elevation = 4.dp,
+        shape = RoundedCornerShape(16.dp)
+    ) {
         Text(
             modifier = Modifier.padding(horizontal = 24.dp),
             text = "$value",
